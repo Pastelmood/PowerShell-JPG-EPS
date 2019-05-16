@@ -1,0 +1,1 @@
+Get-ChildItem $Path -Filter *.eps | % {Compress-Archive -LiteralPath ($Path + $_.BaseName + ".jpg"), ($Path + $_.BaseName + ".eps") -CompressionLevel Optimal -DestinationPath ($Path + $_.BaseName + ".zip") -Force}
